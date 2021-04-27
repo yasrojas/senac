@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rU1Y7+2HVvcBjpJtGQm7iBJsJSFu/9nOp9ZwIJMx4RZ08vbVNcubdyyCCadiv09tD+bfmJH+Grbct+91kUpw1Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Yasmin\\Desktop\\tecnico_em_informatica\\UC8\\UC8P3-yasmin\\UC8P3-yasmin.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Yasmin\\.nuget\\packages\\mysqlconnector\\1.3.4\\mysqlconnector.1.3.4.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sparck's Móveis</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    <div class="geral">
+        <header>
+            <div class="titulo">
+                <h1>Sparck's Móveis</h1>
+            </div>
+            <nav id="menu">
+                <div>
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="Index">Início</a> </li>
+                        <li><a asp-controller="Home" asp-action="Produtos"> Produtos</a></li>
+                        <li><a asp-controller="Cliente" asp-action="Orcamento">Orçamento</a></li>
+                        <li><a asp-controller="Home" asp-action="QuemSomos"> Quem Somos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="navbar-fixed-bottom">
+            <span id="faleconosco">
+                <h2>Fale conosco</h2>
+                <a href="mailto:sparck@sparckmoveis.com">sparck@sparckmoveis.com</a>
+            </span>
+            <br>
+            <span>Cadastre-se e receba novidades do Sparck's:
+                <form method="POST">
+                    <input type="email" required>
+                    <input type="submit" value="Enviar">
+                </form>
+            </span>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </div>
+</body>
+
+</html>

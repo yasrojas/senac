@@ -1,0 +1,48 @@
+@model Cliente
+@{
+    ViewData["Title"] = "Faça seu pedido";
+}
+<div class="orcamento">
+    <h2>Faça aqui o seu pedido</h2>
+
+    <p>Especifique a sua solicitação e um dos nossos atendentes entrará em contato em no máximo 48 horas</p>
+
+    <form method="POST" asp-action="Orcamento">
+        <div>
+            <label asp-for="nome">Nome Completo:</label>
+            <input type="text" asp-for="nome">
+        </div>
+        <div>
+            <label asp-for="email">E-mail:</label>
+            <input type="email" asp-for="email">
+        </div>
+        <div>
+            <label asp-for="telefone">Telefone:</label>
+            <input type="tel" asp-for="telefone">
+        </div>
+        <div>
+            <label asp-for="endereco">Endereço da entrega:</label>
+            <input type="text" asp-for="endereco">
+        </div>
+        <div>Linha do pedido:
+            <p>
+                <input type="radio" asp-for="linha" value="king">
+                <label asp-for="linha">Linha King</label>
+            </p>
+            <p>
+                <input type="radio" asp-for="linha" value="industrial">
+                <label asp-for="linha">Linha Industrial</label>
+            </p>
+            <p>
+                <input type="radio" asp-for="linha" value="clean">
+                <label asp-for="linha">Linha Clean</label>
+            </p>
+        </div>
+        <div>
+            <label asp-for="descricao">Descreva seu pedido:</label>
+            <textarea asp-for="descricao"></textarea>
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+    </section>
+</div>
