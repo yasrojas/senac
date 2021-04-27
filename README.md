@@ -1,2 +1,3 @@
-# senac
-Projetos do curso de Informática
+# Senac
+
+Projetos do curso de  técnico de Informática para Internet do SENAC.
