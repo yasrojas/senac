@@ -1,0 +1,47 @@
+@using Microsoft.AspNetCore.Http;
+@model IEnumerable<PacotesTuristicos>
+@{
+    ViewData["Title"] = "Vitrine";
+}
+
+<h2>Vitrine</h2>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Origem</th>
+            <th>Destino</th>
+            <th>Atrativos</th>
+            <th>Saida</th>
+            <th>Retorno</th>
+            <th>Usuario</th>
+            @if(Context.Session.GetInt32("IdUsuario") != null) 
+                {
+                    <th>Operações</th>
+                }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (PacotesTuristicos pt in Model)
+        {
+            <tr>
+                <td>@pt.Id</td>
+                <td>@pt.Nome</td>
+                <td>@pt.Origem</td>
+                <td>@pt.Destino</td>
+                <td>@pt.Atrativos</td>
+                <td>@pt.Saida.ToShortDateString()</td>
+                <td>@pt.Retorno.ToShortDateString()</td>
+                <td>@pt.Usuario</td>
+                @if(Context.Session.GetInt32("IdUsuario") != null)
+                {   
+                        <td>
+                        <a href="/PacotesTuristicos/Deletar?Id=@pt.Id" onclick="return confirm('Deseja excluir?')">Remover</a>
+                        <a href="/PacotesTuristicos/Editar?Id=@pt.Id">Alterar</a>
+                        </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
